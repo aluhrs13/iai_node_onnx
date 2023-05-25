@@ -1,5 +1,7 @@
 # MIT
 # https://github.com/microsoft/Olive/tree/main/examples/directml/stable_diffusion
+# model https://huggingface.co/aluhrs13/stable-diffusion-v1-5-olive-optimized
+# pip install -r requirements.txt
 
 from typing import Literal
 from pydantic import Field
@@ -10,10 +12,6 @@ from invokeai.app.models.image import ImageType
 import onnxruntime as ort
 from diffusers import OnnxStableDiffusionPipeline
 
-"""
-TODO:
-- Conversions
-"""
 
 class OnnxPipelineInvocation(BaseInvocation):
     """Onnx Pipeline Invocation"""
